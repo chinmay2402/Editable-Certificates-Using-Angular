@@ -124,4 +124,4 @@ For any inquiries or assistance, feel free to contact:
 
 Email: chinmay24csk@gmail.com
 
-GitHub: yourusername
+GitHub: https://github.com/chinmay2402
