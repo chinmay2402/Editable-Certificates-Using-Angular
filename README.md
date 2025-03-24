@@ -109,12 +109,12 @@ Available in: Italian Only.
 
 ---
 
-📜 License
+📜 License<br>
 This project is licensed under the MIT License.
 
 ---
 
-🤝 Contributing
+🤝 Contributing<br>
 Contributions are welcome!
 
 ---
