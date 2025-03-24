@@ -1,6 +1,6 @@
-# 📝 Certificate Management System using Angular
+# 📝 Editable Certificates using Angular
 
-This project is a **Certificate Management System** developed using **Angular**. It provides **editable forms** to generate various certificates in multiple languages, such as:
+This project is a **Editable Certificates** developed using **Angular**. It provides **editable forms** to generate various certificates in multiple languages, such as:
 
 ✅ Birth Certificates (English & Italian)  
 ✅ Death Certificates (English & Italian)  
@@ -71,11 +71,6 @@ By default, the application will run on http://localhost:4200/.
 
 ---
 
-📄 Available Routes
-The application uses Angular Router to navigate between various certificate forms. The available routes are:
-
----
-
 🎨 Certificate Forms Overview
 🟢 Birth Certificate
 Fields: Name, Date of Birth, Gender, Father's Name, Mother's Name.
@@ -117,8 +112,12 @@ Available in: Italian Only.
 📜 License
 This project is licensed under the MIT License.
 
+---
+
 🤝 Contributing
 Contributions are welcome!
+
+---
 
 📧 Contact
 For any inquiries or assistance, feel free to contact:<br>
