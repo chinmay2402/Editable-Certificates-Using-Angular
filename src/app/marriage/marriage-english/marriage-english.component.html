@@ -1,0 +1,240 @@
+
+  <button id="downloadBtn" (click)="generatePDF()" class="btn btn-success">Download PDF</button>
+  <div class="container certificate-container"  id="certificateElement" >
+    <div id="certificateElement" >
+  <div id="page1" style="min-height: 100vh;">
+  <p>Reference No.:  <input [(ngModel)]="marriageEnglishData.referenceNo" class="form-control small-input">
+  </p>
+  
+  <div class="text-center">
+      <img src="assets/death-srilanka.png" alt="Sri Lanka Emblem" class="emblem">
+      <h2 class="fw">SRI LANKA</h2>
+      <h3 class="fw-bold">MARRIAGE CERTIFICATE</h3>
+      <br>
+  </div>
+    
+  <div class="row">
+      <!-- Left side: District (should align with Division) -->
+      <div class="col-md-6 text-start">
+        <p class="district-align">District: 
+          <input type="text" [(ngModel)]="marriageEnglishData.district" class="form-control small-input">
+      </p>
+      </div>
+      
+      <!-- Right side: No. and Division (Aligned properly) -->
+      <div class="col-md-6 text-start">
+          <p>No.: 
+              <input [(ngModel)]="marriageEnglishData.certificateNo" class="form-control small-input">
+          </p>
+          <p>Division: 
+              <input [(ngModel)]="marriageEnglishData.division" class="form-control small-input">
+          </p>
+      </div>
+    
+<div class="csk">
+          <table >
+            <tr>
+                <th class="header"></th> <!-- Number column header -->
+                <th ></th> <!-- Name column header -->
+                <th>Sposo</th> 
+                <th>Sposo</th>
+            </tr>
+            <tr>
+                <td >1</td> <!-- Number for the first row -->
+                <td>Name (in full) of Parties</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandName" class="form-control  small-input"></td>
+               <td><input [(ngModel)]="marriageEnglishData.wifeName" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >2</td> <!-- Number for the second row -->
+                <td>Age (in years)</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandAge" class="form-control  small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeAge" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >3</td> <!-- Number for the third row -->
+                <td>Civil Condition</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandCivilCondition" class="form-control  small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeCivilCondition" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >4</td> <!-- Number for the fourth row -->
+                <td>Rank or Profession and Race</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandProfession" class="form-control  small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeProfession" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >5</td> <!-- Number for the fifth row -->
+                <td>Residence</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandResidence" class="form-control  small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeResidence" class="form-control  small-input"></td>
+            </tr>
+            
+            <tr>
+                <td >6</td> <!-- Number for the sixth row -->
+                <td>Father's Name (in full)</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandFatherName" class="form-control small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeFatherName" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >7</td> <!-- Number for the seventh row -->
+                <td>Rank or Profession of Father</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandProfession2" class="form-control  small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeProfession2" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >8</td> <!-- Number for the eighth row -->
+                <td>Name and Division of Registrar who issued Certificate</td>
+                <td><input [(ngModel)]="marriageEnglishData.husbandCertificateIssuer" class="form-control  small-input"></td>
+                <td><input [(ngModel)]="marriageEnglishData.wifeCertificateIssuer" class="form-control  small-input"></td>
+            </tr>
+            <tr>
+                <td >9</td> <!-- Number for the ninth row -->
+                <td>Place of Solemnization</td>
+                <td colspan="2"><input [(ngModel)]="marriageEnglishData.solemnizationPlace" class="form-control  custom-input"></td>
+            </tr>
+        </table>
+          
+          <p ><strong><i>*Rectification</i></strong></p>
+
+          <p class="parent-data">Solemnized by me (or in my presence) this <input placeholder="Name " [(ngModel)]="marriageEnglishData.solemnziarName" class="form-control small-input"> 
+            Day of <input placeholder="Day " [(ngModel)]="marriageEnglishData.solemnizationDate" class="form-control tiny-input">
+          </p>
+          <br><br>
+              
+       
+          <div class="" style="  text-align: right;margin-top:40px;">
+            <img *ngIf="signatureUrl" [src]="signatureUrl" alt="Official Signature" class="signature-image" >
+            <input style='margin-right: -50px;' type="file" (change)="onFileSelected($event, 'signature')" accept="image/*">
+          
+         
+           <!-- <p style="margin-left:-30px;"> Deputy District Civil Status Officer / </p>
+            <br>
+            <p style="margin-top:-45px;margin-right:15px;">Deputy Director of the National<br></p> 
+            <p style="margin-top:-22px;margin-right:90px;">Registry Office</p> -->
+            
+          </div> 
+          <p style="position: relative;text-align: right;">Registar (or) Minister (as the case may be)</p>
+          
+        
+          <p>This marriage was solemnized between us in the presence of <input placeholder="Officer Name " [(ngModel)]="marriageEnglishData.solemnizationOfficerName" class="form-control custom-input1"> </p>
+          
+           <!-- Witness 1 --> 
+          <p class="parent-data">1. Name in full: <input placeholder="Name in Full" [(ngModel)]="marriageEnglishData.marriageWitness1Name" class="form-control custom-input1"></p><br>
+          <p class="parent-data">&nbsp;&nbsp;&nbsp; Rank or Profession:<input placeholder="Rank or Profession" [(ngModel)]="marriageEnglishData.marriageWitness1Profession" class="form-control custom-input1"></p><br>   
+          <p class="parent-data">&nbsp;&nbsp;&nbsp; Residence of Witness1:<input placeholder="Recidance of Witness" [(ngModel)]="marriageEnglishData.marriageWitness1Recidance" class="form-control custom-input1"></p><br><br>
+             
+           <!-- Witness 2 --> 
+          <p class="parent-data">2. Name in full: <input placeholder="Name in Full" [(ngModel)]="marriageEnglishData.marriageWitness2Name" class="form-control custom-input1"></p><br>
+          <p class="parent-data">&nbsp;&nbsp;&nbsp; Rank or Profession:<input placeholder="Rank or Profession" [(ngModel)]="marriageEnglishData.marriageWitness2Profession" class="form-control custom-input1"></p><br>   
+          <p class="parent-data">&nbsp;&nbsp;&nbsp; Residence of Witness2:<input placeholder="Recidance of Witness" [(ngModel)]="marriageEnglishData.marriageWitness2Recidance" class="form-control custom-input1"></p><br><br>
+
+          <!-- SIGN IMG  UPLOAD -->
+          
+         
+        <div class="table-container">
+          <div class="table-row-bottom">
+            <div class="image-container" style=" margin-top:75px;">
+              <img *ngIf="stampUrl" [src]="stampUrl" alt="Official Signature" class="stamp-image" style="margin-top: -24%;">
+              <input type="file" (change)="onFileSelected($event, 'stamp')" accept="image/*">
+            </div>
+    
+    
+    
+    
+            <p>Signed before me </p>
+            
+    
+    
+            <div class="" style="  margin-top:-70px;text-align: right;">
+              <img *ngIf="signatureUrl" [src]="signatureUrl" alt="Official Signature" class="signature-image" >
+              <input style='margin-right: -50px;' type="file" (change)="onFileSelected($event, 'signature')" accept="image/*">
+            
+           
+             <p style="margin-left:-30px;margin-right:60px;"> Register (or) Minister</p>
+              <br>
+              <!-- <p style="margin-top:-45px;margin-right:15px;"><br></p> 
+              <p style="margin-top:-22px;margin-right:90px;"></p> -->
+              
+            </div> 
+            <!-- <p class="parent-data"> Date: &nbsp; <input [(ngModel)]="marriageEnglishData.date" class="form-control small-input"></p><br><br>
+            <p class="parent-data"> Corrections: 
+              <p>___
+                <br>
+                ___
+                <br>
+                ___
+                <br>
+                ___
+                <br>
+                ___
+              
+            </p><br> -->
+    
+          </div> 
+    </div>
+          
+        
+        <p>I certify that the above is a true copy of the Statement No. <input placeholder="Statement No." [(ngModel)]="marriageEnglishData.marriageStatementNo" class="form-control tiny-input"> 
+          &nbsp; --Fernished to me
+        </p><br>
+        </div>
+        </div>
+        </div>
+        <div id="page2" style="min-height: 100vh;">
+        
+         <p>under Section 34, Marriage registration Ordinance(Chapter 112);<br>
+        of a Marriage Solemnized by <br>
+         (or in the presence of)<p style="text-align: right;margin-right:70px;position: relative;margin-top:-30px;">--minister</p>
+        
+         <p>Date of entry in the District Register's</p>
+           
+
+         <p>(To be filled up only when entering a Marriage Solemnized by a minister)</p>
+         <p style="position: relative;text-align: right;margin-top:-40px;">--District Register</p>
+        <p>I hereby certify that the above is a true copy of the marriage registration filled in this office</p>
+        
+    
+        <div class="table-container">
+          <div class="table-row-bottom">
+            <div class="image-container" style=" margin-top:75px;">
+              <img *ngIf="stampUrl" [src]="stampUrl" alt="Official Signature" class="stamp-image" style="margin-top: -24%;">
+              <input type="file" (change)="onFileSelected($event, 'stamp')" accept="image/*">
+            </div>
+    
+    
+    
+    
+            <p>District Civil Registry Office / National Registry<br> Office</p>
+            
+    
+    
+            <div class="" style="  margin-top:-90px;text-align: right;">
+              <img *ngIf="signatureUrl" [src]="signatureUrl" alt="Official Signature" class="signature-image" >
+              <input style='margin-right: -50px;' type="file" (change)="onFileSelected($event, 'signature')" accept="image/*">
+            
+           
+             <p style="margin-left:-30px;"> Deputy District Civil Status Officer / </p>
+              <br>
+              <p style="margin-top:-45px;margin-right:15px;">Deputy Director of the National<br></p> 
+              <p style="margin-top:-22px;margin-right:90px;">Registry Office</p>
+              
+            </div> 
+            <p class="parent-data"> Date: &nbsp; <input [(ngModel)]="marriageEnglishData.date" class="form-control small-input"></p><br><br>
+            <p class="parent-data"> Corrections: 
+              <p>___
+                <br>
+                ___
+                <br>
+                ___
+                <br>
+                ___
+                <br>
+                ___
+              
+            </p><br>
+          </div>
+          </div> 
+    </div>
+    </div>
+    </div>

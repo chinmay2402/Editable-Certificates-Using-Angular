@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.certificate-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  margin-top: 5%;
+}
+
+
+button {
+  margin: 20px;
+  float: right;
+  margin-left: 80%;
+}
+.container {
+  border: 2px solid black;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.top-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.italian-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.reference-number {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.address {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.declaration {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.exam-title {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  width: 40%;
+  font-weight: bold;
+}
+
+.small-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.subjects-header {
+  display: flex;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.subject-col, .grade-col, .definition-col {
+  flex: 1;
+  text-align: center;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.grades-table th, .grades-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.btn-success {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+
+}
+
+
+
+.italian-title {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reference-number {
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 100px;
+  margin: 20px 0;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.address {
+  text-align: center;
+  line-height: 1.1;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.declaration {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.declaration::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background: black;
+}
+
+.ref-date {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 30px 0;
+}
+
+.exam-title {
+  font-weight: bold;
+  margin: 20px 0 30px 0;
+}
+
+.form-row {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.form-label {
+  min-width: 180px;
+}
+
+.form-colon {
+  margin: 0 10px;
+}
+
+.form-value {
+  flex: 1;
+}
+
+.subjects-header {
+  display: flex;
+  margin: 40px 0 0 0;
+  font-weight: bold;
+}
+
+.subject-col {
+  flex: 2;
+  text-decoration: underline;
+  padding-bottom: 20%;
+}
+
+.grade-col, .definition-col {
+  flex: 1;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.line {
+  display: flex;
+  margin: 30px 0;
+}
+
+.line-left, .line-center, .line-right {
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.line-center {
+  text-align: center;
+  border-bottom: none;
+}
+
+.verification-text {
+  text-align: left;
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+.grades-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.grades-table th, 
+.grades-table td {
+  border: 1px solid black;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.grades-table th {
+  font-weight: normal;
+}
+
+.period-header {
+  text-align: center;
+  font-weight: normal;
+  padding: 8px;
+}
+
+.grade-row td {
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.grades-note {
+  text-align: center;
+  border-top: none !important;
+  font-style: normal;
+}
+
+.footer-note {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.signature-left {
+  max-width: 300px;
+}
+
+.reference {
+            display:block;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .form-control{
+            display: inline-block; 
+            width: 450px; 
+            height: 30px;
+        }
+        .small-input {
+            width: 250px !important; /* Adjust width as needed */
+            display: inline-block;
+            height: 30px !important;
+        }
+button {
+    margin: 20px;
+    float: right;
+    margin-left: 82% !important;
+  }
+
+</style>
+</head>
+<body>
+    <div class=" certificate-container"  #certificate >
+       
+        <button id="downloadBtn" (click)="generatePDF()" class="btn btn-success">Download PDF</button>
+         <div class="reference">
+        <p>N. di Riferimento: <input [(ngModel)]="odianryItalianData.referenceNo" class="form-control small-input"></p>
+        <p>N. di Serie</p>
+    </div>
+  <div class="header">
+    
+    <img src="assets/death-srilanka.png" alt="Sri Lanka Emblem">
+    <div class="title">REPUBBLICA DEMOCRATICA SOCIALISTA DELLO SRI LANKA</div>
+    <div class="address">
+      Dipartimento degli Esami<br>
+      Servizio Nazionale delle Valutazioni e Prove<br>
+      Casella Postale 1503, COLOMBO, SRI LANKA
+    </div>
+  </div>    
+
+  <div class="declaration">DICHIARAZIONE UFFICIALE</div>
+
+  <div class="ref-date">
+    <p>Mio Rif.: <input [(ngModel)]="odianryItalianData.referenceNo" class="form-control small-input"></p>
+        <p class="data-data">Data</p>
+  </div>
+
+  <div class="exam-title">
+    Esame per il Certificato Generale d'Istruzione (Livello Ordinario), Sri Lanka
+  </div>
+
+  <div class="details">
+    <p>Nome per Esteso: <input [(ngModel)]="odianryItalianData.name" class="form-control small-input"></p>
+    <p>Anno dell'Esame: <input [(ngModel)]="odianryItalianData.examYear" class="form-control small-input"></p>
+    <p>Numero d'Indice: <input [(ngModel)]="odianryItalianData.indexNo" class="form-control small-input"></p>
+</div>
+
+  <div class="subjects-header">
+    <div class="subject-col">MATERIA</div>
+    <div class="grade-col">VOTO</div>
+    <div class="definition-col">DEFINIZIONE</div>
+  </div>
+
+  <div class="line">
+    <div class="line-left"></div>
+    <div class="line-center">--</div>
+    <div class="line-right"></div>
+  </div>
+
+  <div class="verification-text">
+    Questa dichiarazione dovrà essere accettata come prova dell'esito positivo del candidato solo se<br>
+    riporta il bollo in secco del Dipartimento degli Esami, Sri Lanka.
+  </div>
+
+  <div class="grades-title">GAMMA DEI VOTI</div>
+
+  <table class="grades-table">
+    <tr>
+      <th colspan="6">C. G. I. (Livello Ordinario)</th>
+      <th colspan="3">C. G. I. (Livello Avanzato)</th>
+    </tr>
+    <tr>
+      <td colspan="3" class="period-header">Prima del 2001</td>
+      <td colspan="3" class="period-header">2001 e Dopo</td>
+      <td colspan="3"></td>
+    </tr>
+    <tr>
+      <td>Voti</td>
+      <td>Grado</td>
+      <td>Simbolo</td>
+      <td>Voti</td>
+      <td>Grado</td>
+      <td>Simbolo</td>
+      <td>Voti</td>
+      <td>Grado</td>
+      <td>Simbolo</td>
+    </tr>
+    <tr class="grade-row">
+      <td>100 – 75</td>
+      <td>Ottimo</td>
+      <td>D</td>
+      <td>100 – 75</td>
+      <td>Ottimo</td>
+      <td>A</td>
+      <td>100 – 75</td>
+      <td>Ottimo</td>
+      <td>A</td>
+    </tr>
+    <tr class="grade-row">
+      <td>74 – 50</td>
+      <td>Buono</td>
+      <td>C</td>
+      <td>74 – 65</td>
+      <td>Distinto</td>
+      <td>B</td>
+      <td>74 – 65</td>
+      <td>Distinto</td>
+      <td>B</td>
+    </tr>
+    <tr class="grade-row">
+      <td>49 – 35</td>
+      <td>Sufficiente</td>
+      <td>S</td>
+      <td>64 – 50</td>
+      <td>Buono</td>
+      <td>C</td>
+      <td>64 – 50</td>
+      <td>Buono</td>
+      <td>C</td>
+    </tr>
+    <tr class="grade-row">
+      <td>34 - 00</td>
+      <td>Insufficiente</td>
+      <td>F</td>
+      <td>49 – 35</td>
+      <td>Sufficiente</td>
+      <td>S</td>
+      <td>49 – 35</td>
+      <td>Sufficiente</td>
+      <td>S</td>
+    </tr>
+    <tr class="grade-row">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>34 - 00</td>
+      <td>Scarso<br>(Insufficiente)</td>
+      <td>W</td>
+      <td>34 - 00</td>
+      <td>Scarso<br>(Insufficiente)</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td colspan="9" class="grades-note">+ - Assente, X – Non Deciso</td>
+    </tr>
+  </table>
+
+  <div class="footer-note">
+    Nota: - Questo certificato è stato stampato usando tecnologia UV (Ultravioletta) (cioè Stemma<br>
+    dello Sri Lanka, ecc.). Si prega di verificare i contrassegni UV speciale per l'autenticità.
+  </div>
+
+  <div class="signatures">
+    <div class="signature-left">
+      Commissario / Commissario aggiunto<br>
+      degli Esami
+    </div>
+    <div>Commissario Generale</div>
+  </div>
+    </div>  
+</body>
+</html>

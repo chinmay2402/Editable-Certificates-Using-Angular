@@ -1,0 +1,223 @@
+
+  <button id="downloadBtn" (click)="generatePDF()" class="btn btn-success">Download PDF</button>
+  <div class="container certificate-container" id="certificateElement" >
+  <div id="certificateElement" >
+    <div id="page1" style="min-height: 100vh;">
+    <p>N. di Referimento.:  <input [(ngModel)]="birthItalianData.referenceNo" class="form-control custom-input1">
+    </p>
+    
+    <div class="text-center">
+        <img src="assets/death-srilanka.png" alt="Sri Lanka Emblem" class="emblem">
+        <h2 class="fw">SRI LANKA</h2>
+        <h3 class="fw-bold">CERTIFICA TO DI NASCITA</h3>
+        <br>
+    </div>
+      
+    <div class="row">
+        <!-- Left side: District (should align with Division) -->
+        <div class="col-md-6 text-start">
+          <p class="district-align">Distretto: 
+            <input [(ngModel)]="birthItalianData.district" class="form-control custom-input1">
+        </p>
+        </div>
+        
+        <!-- Right side: No. and Division (Aligned properly) -->
+        <div class="col-md-6 text-start">
+            <p>No.: 
+                <input [(ngModel)]="birthItalianData.certificateNo" class="form-control custom-input1">
+            </p>
+            <p>Divisione: 
+                <input [(ngModel)]="birthItalianData.division" class="form-control custom-input1">
+            </p>
+        </div>
+      </div>
+    
+    <div class="line"></div>
+    <div class="table-container">
+        
+      <div class="table-row">
+        <div class="table-cell">1. Data e luogo di Nascita</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.dateOfDeath" class="form-control small-input small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell" >2. Nome</div>
+        <div class="table-cell"><input [(ngModel)]="birthItalianData.name" class="form-control small-input small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">3. Sesso</div>
+        <div class="table-cell"><input [(ngModel)]="birthItalianData.genderEthnicity" class="form-control small-input "> </div>
+      </div>
+      </div>
+      
+      <div class="table-container1">
+        <div class="table-row">
+        <div class="table-cell3">4. Padre</div>
+      
+        <div class="csk">
+          <div class="table-cell1" >Nome e Cognome:</div>
+          <div class="table-cell2" ><input [(ngModel)]="birthItalianData.nameandsurname" class="form-control custom-input "> </div>
+          </div>
+        <div class="csk">
+          <div class="table-cell1">Data di Nascita:</div>
+          <div class="table-cell2"><input [(ngModel)]="birthItalianData.dateofbirth" class="form-control custom-input "> </div>
+        </div>
+        <div class="csk">
+          <div class="table-cell1">Luogo di Nascita:</div>
+          <div class="table-cell2"><input [(ngModel)]="birthItalianData.placeofbirth" class="form-control custom-input "> </div>
+          
+        </div>
+        <div class="csk">
+          <div class="table-cell1">Ethnia:</div>
+          <div class="table-cell2"><input [(ngModel)]="birthItalianData.ethi" class="form-control custom-input "> </div>
+         
+        </div>
+        
+          <div class="table-cell1">Rango o Professione:</div>
+          <div class="table-cell2"><input [(ngModel)]="birthItalianData.rank" class="form-control custom-input "> </div>
+       
+      </div>
+    </div>
+            <!-- <div class=" table-cell2 " >Name and Surname <input [(ngModel)]="birthItalianData.dateofbirth" class="form-control small-input" style="margin-top:5px;margin-left:110%;"></div><span class="line1"></span> -->
+            <!-- <p class="table-cell2 parent-data" id="dob">Date of Birth:</p><input [(ngModel)]="birthItalianData.dateofbirth" class="form-control small-input" style="margin-left:100px;margin-top:5px;"><span class="line1"></span>
+            <p class="parent-data" id="place">Place of Birth:</p><input [(ngModel)]="birthItalianData.placeofbirth" class="form-control small-input" style="margin-left:100px;margin-top:5px;"><span class="line1"></span>
+            <p class="parent-data" id="ethi">Ethnicity:</p><input [(ngModel)]="birthItalianData.ethi" class="form-control small-input" style="margin-left:130px;margin-top:5px;"><span class="line1"></span> 
+            <p class="parent-data" id="rank">Rank or Profession:</p><input [(ngModel)]="birthItalianData.rank" class="form-control small-input" ><span class=""></span>
+         -->
+    
+         <div class="table-container1">
+          <div class="table-row">
+            <div class="table-cell3">5. Madre</div>
+            <div class="csk">
+              <div class="table-cell1">Nome e Cognome:</div>
+              <div class="table-cell2"><input [(ngModel)]="birthItalianData.nameandsurname2" class="form-control custom-input "> </div>
+            </div>
+            <div class="csk">
+              <div class="table-cell1">Data di Nascita:</div>
+              <div class="table-cell2"><input [(ngModel)]="birthItalianData.dateofbirth2" class="form-control custom-input "> </div>
+            </div>
+            <div class="csk">
+              <div class="table-cell1">Luogo di Nascita:</div>
+              <div class="table-cell2"><input [(ngModel)]="birthItalianData.placeofbirth2" class="form-control custom-input "> </div>
+            </div>
+            <div class="csk">
+              <div class="table-cell1">Ethnia:</div>
+              <div class="table-cell2"><input [(ngModel)]="birthItalianData.ethi2" class="form-control custom-input "> </div>
+            </div>
+           
+              <div class="table-cell1">Eta`:</div>
+              <div class="table-cell2"><input [(ngModel)]="birthItalianData.age" class="form-control custom-input "> </div>
+            
+          </div>
+        </div>
+  
+        <div class="table-container">
+          <div class="table-row">
+            <div class="table-cell">6. I genitori erano coniugati? </div>
+            <div class="table-cell full line"><input [(ngModel)]="birthItalianData.declarantName" class="form-control small-input"> </div>
+          </div>
+        </div>
+
+    
+      <div class="table-container1">
+        <div class="table-row">
+          <div class="table-cell3">7. Se il nonno è nato nello Sri Lanka</div>
+          <div class="csk">
+            <div class="table-cell1">Nome e Cognome</div>
+            <div class="table-cell2"><input [(ngModel)]="birthItalianData.nameandsurname3" class="form-control custom-input "> </div>
+          </div>
+          <div class="csk">
+            <div class="table-cell1">Anno di Nascita</div>
+            <div class="table-cell2"><input [(ngModel)]="birthItalianData.dateofbirth3" class="form-control custom-input "> </div>
+          </div>
+            <div class="table-cell1">Luogo di Nascita</div>
+            <div class="table-cell2"><input [(ngModel)]="birthItalianData.placeofbirth3" class="form-control custom-input "> </div>
+        </div>
+      </div>
+
+      <div class="table-container1">
+        <div class="table-row ">
+          <div class="table-cell3">8. Se il padre non è nato nello Sri Lanka e il bisnonno è nato nello Sri Lanka, il bisnonno</div>
+          <div class="csk">
+            <div class="table-cell1">Nome e Cognome</div>
+            <div class="table-cell2"><input [(ngModel)]="birthItalianData.nameandsurname4" class="form-control custom-input "> </div>
+          </div>
+          <div class="csk">
+            <div class="table-cell1">Anno di Nascita</div>
+            <div class="table-cell2"><input [(ngModel)]="birthItalianData.dateofbirth4" class="form-control custom-input "> </div>
+          </div>
+            <div class="table-cell1">	Luogo di Nascita	</div>
+            <div class="table-cell2"><input [(ngModel)]="birthItalianData.placeofbirth4" class="form-control custom-input "> </div>
+        </div>
+      </div>
+  
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell">9. Nome e cognome e residenza del dichiarante e a quale titolo fa la dichiarazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.declarantName" class="form-control small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">10. Firma del dichiarante</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.infosign" class="form-control small-input"> </div>
+      </div>
+    </div>
+  </div>
+  <div id="page2" style="min-height: 100vh;">
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell">11. Data della registrazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.declarantSignature" class="form-control small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">12. Firma dell’Ufficiale di Stato Civile</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.registrationDate" class="form-control small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">13. Nome inserito o sostituito dopo la registrazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.nameandsurname" class="form-control small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">14. Nome della persona su dichiarazione della quale i dettagli relativi alla casella 13 sono stati forniti e a quale titolo fa la dichiarazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.officerSignature" class="form-control small-input"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">15. Data di inserimento o sostituzione e firma dell’Ufficiale di Stato Civile Distrettuale o del Direttore dell’Anagrafe Nazionale</div>
+        <div class="table-cell full-line"><input [(ngModel)]="birthItalianData.regisign" class="form-control small-input"> </div>
+      </div>
+    </div>
+
+    <div class="text-left mt-4">
+        <h5>* Annotations</h5>
+        <p>Con la presente certifico che la suddetta è una copia conforme della registrazione di nascita <br> archiviata in questo ufficio.</p>
+      </div>
+
+      <div class="table-container">
+        <div class="table-row-bottom">
+          <div class="image-container" style=" margin-top:75px;">
+            <img *ngIf="stampUrl" [src]="stampUrl" alt="Official Signature" class="stamp-image" style="margin-top: -24%;">
+            <input type="file" (change)="onFileSelected($event, 'stamp')" accept="image/*">
+          </div>
+  
+  
+  
+  
+          <p>Ufficio di Stato Civile Distrettuale / Anagrafe <br> Nazionale</p>
+          
+  
+  
+          <div class="" style="  margin-top:-90px;text-align: right;">
+            <img *ngIf="signatureUrl" [src]="signatureUrl" alt="Official Signature" class="signature-image" >
+            <input style='margin-right: -50px;' type="file" (change)="onFileSelected($event, 'signature')" accept="image/*">
+          
+         
+           <p style="margin-left:-30px;"> Ufficiale di Stato Civile Distrettuale  </p>
+            <br>
+            <p style="margin-top:-45px;margin-right:15px;">Aggiunto / Vice Direttore dell’Anagrafe <br></p> 
+            <p style="margin-top:-22px;margin-right:90px;">Nazionale</p>
+            
+          </div> 
+          <p class="parent-data"> Data: &nbsp; <input [(ngModel)]="birthItalianData.issueDate" class="form-control custom-input"></p><br><br>
+          <p class="parent-data"> Annotazioni: &nbsp; <input [(ngModel)]="birthItalianData.annotations" class="form-control tiny-input"></p><br>
+          </div>
+        </div> 
+        </div>
+  </div>

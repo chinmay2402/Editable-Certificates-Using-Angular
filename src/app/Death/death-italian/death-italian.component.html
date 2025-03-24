@@ -1,0 +1,137 @@
+<div class="container certificate-container"  #certificate >
+    <button id="downloadBtn" (click)="generatePDF()" class="btn btn-success">Download PDF</button>
+    <p id="ref3">N. di Riferimento:  <input [(ngModel)]="deathData.referenceNo" class="form-control small-input">
+    </p>
+    
+    <div class="text-center">
+        <img src="assets/death-srilanka.png" alt="Sri Lanka Emblem" class="emblem">
+        <h2 class="fw">SRI LANKA</h2>
+        <h3 class="fw-bold">CERTIFICA TO DI MORTE</h3>
+        <br>
+    </div>
+      
+    <div class="row">
+        <!-- Left side: District (should align with Division) -->
+        <div class="col-md-6 text-start">
+          <p class="district-align">Distretto: 
+            <input [(ngModel)]="deathData.district" class="form-control small-input">
+        </p>
+        </div>
+        
+        <!-- Right side: No. and Division (Aligned properly) -->
+        <div class="col-md-6 text-start">
+            <p>No.: 
+                <input [(ngModel)]="deathData.certificateNo" class="form-control small-input">
+            </p>
+            <p>Divisione: 
+                <input [(ngModel)]="deathData.division" class="form-control small-input">
+            </p>
+        </div>
+      </div>
+    
+        <div class="line"></div>
+    <div class="table-container">
+        
+      <div class="table-row">
+        <div class="table-cell">1. Data e Luogo del Decesso</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.dateOfDeath" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">2. Nome e Cognome</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.name" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">3. Sesso e Etria</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.genderEthnicity" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">4. Eta`</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.age" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">5. Rango o Professione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.profession" class="form-control"> </div>
+      </div>
+      <div class="table-row parent-row">
+        <div class="table-cell">6. Nome e Cognome dei Genitori</div>
+        <div class="table-cell parent-cell">
+          <p class="parent-data">Padre: <input [(ngModel)]="deathData.father" class="form-control custom-input"></p><span class="line1"></span>
+          <p class="parent-data">Madre: <input [(ngModel)]="deathData.mother" class="form-control custom-input1"></p>
+          <div class="vertical-line-short"></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell">7. Causa della Morte e Luogo della Sepoltura o Cremazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.causeOfDeath" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Burial Place:</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.burialPlace" class="form-control"> </div>
+      </div>
+    </div>
+  
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell">8. Nome completo e domicilio del Dichiarante e a quale titolo fa la dichiarazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.declarantName" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Declarant’s Title</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.declarantTitle" class="form-control"> </div>
+      </div>
+    </div>
+  
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell">9.Firma del Dichiarante</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.declarantSignature" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">10.Dta della Registrazione</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.registrationDate" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">11. Firma del Ufficiale di Stato Stato Civile</div>
+        <div class="table-cell full-line"><input [(ngModel)]="deathData.officerSignature" class="form-control"> </div>
+      </div>
+    </div>
+
+    <div class="text-left mt-4">
+      <h5 style="margin-top:-20px;"><i>* Annotations</i></h5>
+      <p>I hereby certify that the above is a true copy of the death record filed in this office.</p>
+    </div>
+
+  <div class="table-container">
+      <div class="table-row-bottom">
+        <div class="image-container" style=" margin-top:75px;">
+          <img *ngIf="stampUrl" [src]="stampUrl" alt="Official Signature" class="stamp-image" style="margin-top: -24%;">
+          <input type="file" (change)="onFileSelected($event, 'stamp')" accept="image/*">
+        </div>
+
+
+
+
+        <p>District Civil Registry Office / National Registry<br> Office</p>
+        
+
+
+        <div class="" style="  margin-top:-90px;text-align: right;">
+          <img *ngIf="signatureUrl" [src]="signatureUrl" alt="Official Signature" class="signature-image" >
+          <input style='margin-right: -50px;' type="file" (change)="onFileSelected($event, 'signature')" accept="image/*">
+        
+       
+         <p style="margin-left:-30px;"> Deputy District Civil Status Officer / </p>
+          <br>
+          <p style="margin-top:-45px;margin-right:15px;">Deputy Director of the National<br></p> 
+          <p style="margin-top:-22px;margin-right:90px;">Registry Office</p>
+          
+        </div> 
+        <p class="parent-data"> Date: &nbsp; <input [(ngModel)]="deathData.issueDate" class="form-control small-input"></p><br><br>
+        <p class="parent-data"> Annotations: &nbsp; <input [(ngModel)]="deathData.annotations" class="form-control small-input"></p><br>
+
+      </div> 
+</div>

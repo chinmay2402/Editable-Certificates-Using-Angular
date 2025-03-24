@@ -1,0 +1,219 @@
+
+  <button id="downloadBtn" (click)="generatePDF()" class="btn btn-success">Download PDF</button>
+  <div class="container certificate-container"  id="certificateElement" >
+    <div id="certificateElement" >
+  <div id="page1" style="min-height: 100vh;">
+    <br><br>
+    <p>N. di Riferimento:  <input [(ngModel)]="gramaEnglishData.referenceNo" class="form-control small-input">
+    </p>
+    
+    <div class="text-center">
+        <!-- <img src="assets/death-srilanka.png" alt="Sri Lanka Emblem" class="emblem"> -->
+        <h2 class="fw"></h2>
+        <h3 class="fw-bold">Certificato di residenza e reputazione rilasciato dal Grama <br>Niladhari</h3>
+        <p>Questo certificato rilasciato dal Grama Niladhari della Divsione in cui il richiendente risiede e` valido solo per 6 mesi dalla data
+         <br>della controfirma del rilascio </p>
+     
+    
+    </div>
+      
+    <div class="row">
+        <!-- Left side: District (should align with Division) -->
+        <!-- <div class="col-md-6 text-start">
+          <p class="district-align">District: 
+            <input [(ngModel)]="gramaEnglishData.district" class="form-control small-input">
+        </p>
+        </div> -->
+        
+        <!-- Right side: No. and Division (Aligned properly) -->
+        <!-- <div class="col-md-6 text-start">
+            <p>No.: 
+                <input [(ngModel)]="gramaEnglishData.certificateNo" class="form-control small-input">
+            </p>
+            <p>Division: 
+                <input [(ngModel)]="gramaEnglishData.division" class="form-control small-input">
+            </p>
+        </div>
+      </div> -->
+    
+    <div class="line"></div>
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell" style="border-right: 1px solid black; position: relative;">1.  (a) Distretto e Divisone del <br><p style="margin-left:40px;">Segretario Divisionale</p></div>
+        <div class="table-cell"><input [(ngModel)]="gramaEnglishData.divisionalSecretaryDivision" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell" style="border-right: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;(b) Divsione e Numero del Grama Niladhari</div>
+        <div class="table-cell full-line"><input [(ngModel)]="gramaEnglishData.gramaNiadhariDivision" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell" style="border-right: 1px solid black;" id="c"> &nbsp;&nbsp;&nbsp;&nbsp;(c) Il richiedente e` conosciuto personalmente dal <br><p style="margin-left:40px;"> Grama Niladhari?</p></div>
+        <div class="table-cell full-line"><input [(ngModel)]="gramaEnglishData.personallyKnownApplicant" class="form-control"> </div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell" style="border-right: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;(d) Se si, da quando</div>
+        <div class="table-cell full-line"><input [(ngModel)]="gramaEnglishData.when" class="form-control"> </div>
+      </div>
+      </div>
+    </div>
+
+
+
+
+<div class="content-wrapper">
+    <div class="content">
+        <div class="border-box1">
+            <div>2.<p style="margin-left:300px;margin-top:-20px;white-space:nowrap;">
+                <b>Informazioni sul Richiedente</b></p>
+            </div>
+        </div>
+
+        <div class="border-box">
+          <p class="parent cell">(a) Nome e Indirizzo</p>
+          <span class="content"><input [(ngModel)]="gramaEnglishData.applicantNameAddress" class="form-control"> </span>
+      </div>
+      
+
+        <div class="border-box ">
+          <p class="parent cell">(b) Sesso</p>
+          <span class="content"><input [(ngModel)]="gramaEnglishData.applicantSex" class="form-control"> </span>
+      </div>
+
+      <div class="border-box ">
+        <p class="parent cell" >(c) Eta</p>
+        <p class="content" ><input style="margin-top: 12px;" [(ngModel)]="gramaEnglishData.applicantAge" class="form-control tiny-input"> </p>
+        <div class="vertical-line-short1"> <p style=" padding: 15px;">Stato Civile <input [(ngModel)]="gramaEnglishData.applicantCivilStatus" class="form-control small-input"></p></div> 
+    </div>
+          
+
+        
+
+    <div class="border-box ">
+      <p class="parent cell">(d) Se cittadino srilankese</p>
+      <p class="content"><input style="margin-top: 12px;" [(ngModel)]="gramaEnglishData.isApplicantSrilankan" class="form-control tiny-input"> </p>
+      <div class="vertical-line-short1"><p style=" padding: 15px;">Religione <input [(ngModel)]="gramaEnglishData.applicantReligion" class="form-control small-input"></p></div>
+  </div>
+    </div>    
+
+</div>
+
+
+
+<div class="table-container">
+      <div class="table-row">
+        <div style="  width: 410px !important; border-right: 1px solid black;padding:10px;">(e) Professione Attuale<br></div>
+        <div class="table-cell"><input [(ngModel)]="gramaEnglishData.presentOccupation" class="form-control custom-input"></div>
+      </div>
+
+      <div class="table-row">
+        <div style="  width: 410px !important; border-right: 1px solid black; padding:10px;">(f) Periodo di residenza nel villaggio<br><p></p></div>
+        <div class="table-cell "><input [(ngModel)]="gramaEnglishData.periodOfRecidance" class="form-control custom-input"> </div>
+      </div>
+
+      <div class="table-row">
+        <div style="  width: 410px !important; border-right: 1px solid black;padding:10px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I  N. di Carta d'Identita Nazionale<br></div>
+        <div class="table-cell"><input [(ngModel)]="gramaEnglishData.nationalIdentityCardNo" class="form-control custom-input"> </div>
+      </div>
+      <div class="table-row">
+        <div style="  width: 410px !important; height: 70px !important; border-right: 1px solid black; padding:10px;" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II Numero del Registro Elettorale e <br><p style="margin-left:40px;">General Registration</p><br><p style="margin-left:40px;"></p></div>
+        <div class="table-cell"> <input [(ngModel)]="gramaEnglishData.electrolRegistrationNumber" class="form-control custom-input"></div>
+      </div>
+      
+      <div class="table-row">
+        <div style="  width: 410px !important; border-right: 1px solid black;  padding:10px;" > &nbsp;&nbsp;&nbsp;&nbsp;(g) Nome e Indirizzo del padre<br><p style="margin-left:40px;"></p></div>
+        <div class="table-cell"><input [(ngModel)]="gramaEnglishData.fatherNameAddress" class="form-control custom-input"> </div>
+      </div>
+
+      <div class="table-row">
+        <div style="  width: 410px !important; border-right: 1px solid black;  padding:10px;"> &nbsp;&nbsp;&nbsp;&nbsp;(h) Scopo per il quale e` richiesto il<br><p style="margin-left:40px;"></p></div>
+        <div class="table-cell"><input [(ngModel)]="gramaEnglishData.certificatePurpose" class="form-control custom-input"> </div>
+      </div>
+
+      <div class="table-row">
+        <div style="  width: 410px !important; border-right: 1px solid black;  padding:10px;"> &nbsp;&nbsp;&nbsp;&nbsp;(i) Firma/Impronta del Pollice<br><p style="margin-left:40px;"></p></div>
+        <div class="table-cell"><input [(ngModel)]="gramaEnglishData.signature" class="form-control custom-input"> </div>
+      </div>
+
+      <div class="table-row">
+        <div class="table-cell">3.<p style="margin-left:300px;margin-top:-20px;white-space:nowrap;"><b>Altre Informazioni</b></p></div>
+        <!-- <div class="table-cell full-line"> </div> -->
+      </div>
+
+
+      <div class="table-row">
+        <div style="  width: 410px !important;height:70px !important; border-right: 1px solid black;  padding:10px;"> &nbsp;&nbsp;&nbsp;(a) Periodo di residenza nella Divisione<br><p style="margin-left:40px;">del Grama Niladhari</p></div>
+        <div class="table-cell "><input [(ngModel)]="gramaEnglishData.periodOfRecidance" class="form-control custom-input"> </div>
+      </div>
+
+
+      <div class="table-row">
+        <div style="  width: 410px !important;height:70px !important; border-right: 1px solid black; padding:10px;"> &nbsp;&nbsp;&nbsp;(b) Altre prove del periodo di residenza </div>
+        <div class="table-cell full-line"> <input [(ngModel)]="gramaEnglishData.proofOfRecidance" class="form-control custom-input"></div>
+      </div>
+
+      
+      <div class="table-row">
+        <div style="  width: 410px !important;height:70px !important; border-right: 1px solid black; padding:10px;"> &nbsp;&nbsp;&nbsp;(c) Il Richiedente e` stato condannato da <br><p style="margin-left:40px;">un tribunale?</p></div>
+        <div class="table-cell full-line"> <input [(ngModel)]="gramaEnglishData.isApplicatCovicted" class="form-control custom-input"></div>
+      </div>
+
+
+      <div class="table-row">
+        <div style="  width: 410px !important;height:90px !important; border-right: 1px solid black; padding:10px;"> &nbsp;&nbsp;&nbsp;(d) Se ha interessi in attivita pubbliche <br><p style="margin-left:40px;">servizi sociali, lavoro comunitari , ecc?</p></div>
+        <div class="table-cell full-line"><input [(ngModel)]="gramaEnglishData.interestedActivities" class="form-control custom-input"> </div>
+      </div>
+
+
+      <div class="table-row">
+        <div style="  width: 410px !important;height:50px !important; border-right: 1px solid black; padding:10px;"> &nbsp;&nbsp;&nbsp;(e) La sua reputazione <br><p style="margin-left:40px;"></p></div>
+        <div class="table-cell full-line"><input [(ngModel)]="gramaEnglishData.character" class="form-control custom-input"> </div>
+      </div>
+
+      </div>
+      </div>
+      <div id="page2" style="min-height: 100vh;">
+      <div class="table-container">
+      
+       4. <b>Osservazioni </b> <input style="padding: 10px; margin-top:13px;" [(ngModel)]="gramaEnglishData.remark" class="form-control custom-input1"> 
+      
+        
+        <!-- <div class="table-cell full-line"> </div> -->
+
+      <div class="line"></div>
+
+      <p><b><i>*Annotazioni</i></b></p>
+
+
+<!-- <div class="vertical-line-short8"></div> -->       
+</div>
+<p >Si certifica che a quanto mi consta le suddetta generalita` sono corrette, il richiendente e`<br>cittadino della Sri Lanka<br>
+  per nascita o registrazione, il suo Numero di Certificato di<br>
+  Registrazione e`e che e` stato rilascito da - </p>
+<div class="stamp-container">
+  <div class="image-container">
+    <img *ngIf="stampUrl" [src]="stampUrl" alt="Official Stamp" class="stamp-image">
+    <input type="file" (change)="onFileSelected($event, 'stamp')" accept="image/*">
+  </div>
+
+  <p>Timbro Ufficiale: </p>
+
+  <div class="image-container" style="text-align: right; margin-left:460px; margin-top:-65px;">
+    <img *ngIf="signatureUrl" [src]="signatureUrl" alt="Official Signature" class="stamp-image" style="margin-top: -24%;">
+    <input type="file" (change)="onFileSelected($event, 'signature')" accept="image/*">
+  </div>
+</div>
+
+<div class="signature-container">
+  <p id="last">Firma del Grama</p>
+  <p id="sec">Niladhari e Timbro</p>
+  <p id="stamp">Ufficiale</p>
+</div>
+
+<div >
+  <br>
+<p>Data: <input [(ngModel)]="gramaEnglishData.date" class="form-control tiny-input"> </p>
+
+<p>Rettifiche: <input [(ngModel)]="gramaEnglishData.adjustments" class="form-control custom-input" style="margin-left: 5px;"> </p>
+</div>
+</div>
+</div>

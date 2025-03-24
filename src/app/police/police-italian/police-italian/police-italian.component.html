@@ -1,0 +1,65 @@
+<div class="container certificate-container"  #certificate >
+    <button id="downloadBtn" (click)="generatePDF()" class="btn btn-success">Download PDF</button>
+    <p id="ref">Reference No.:  <input [(ngModel)]="policedata.referenceNo" class="form-control small-input">
+    </p>
+
+
+    <p id="ref2">Telefono:  <input [(ngModel)]="policedata.telephoneno" class="form-control small-input">
+      <p class="email-align">Email: 
+            <input [(ngModel)]="policedata.email" class="form-control small-input">
+        </p> 
+   
+    
+    <div class="text-center">
+        <img src="assets/logo.png" alt="Sri Lanka Emblem" class="emblem">
+        <!-- <h2 class="fw">SRI LANKA</h2>
+        <h3 class="fw-bold">DEATH CERTIFICATE</h3> -->
+        <br>
+    </div>
+      
+    <div class="row">
+        <!-- Left side: District (should align with Division) -->
+        <div class="col-md-6 text-start">
+          <!-- <p class="email-align">Email: 
+            <input [(ngModel)]="deathData.email" class="form-control small-input">
+        </p> -->
+        </div>
+        
+        <!-- Right side: No. and Division (Aligned properly) -->
+        <div class="col-md-6 text-start">
+            <!-- <p>No.: 
+                <input [(ngModel)]="deathData.certificateNo" class="form-control small-input">
+            </p>
+            <p>Division: 
+                <input [(ngModel)]="deathData.division" class="form-control small-input">
+            </p> -->
+        </div>
+        <!-- <h1>hi</h1> -->
+      </div>
+
+
+      <div class="container">
+<hr>
+<h5 style="text-align: center;">DIREZIONE GENERALE DELLA POLIZIA, COLOMBO , SRI LANKA</h5>
+<h5 style="text-align: center;">Certificato del Casellario Giudizizale</h5>
+<br><br>
+<p>
+    S.E I'Ambasciatore, Ambasciata d'Italia, Colombo
+    <br>
+    Con la presente si certifica che:&nbsp; &nbsp; &nbsp;  <input [(ngModel)]="policedata.fullname" class="form-control">
+
+</p> 
+<br>    
+
+<p> 
+    &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Passaporto numero: &nbsp; &nbsp; &nbsp;  <input [(ngModel)]="policedata.passportnum" class="form-control">
+    <br><br>
+    &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Indrizzo:  &nbsp; &nbsp; &nbsp;<input [(ngModel)]="policedata.add" class="form-control">
+</p>
+<p>Non ha avuto precedenti negativi presso la Polizia della Sri Lanka durante il periodo dal<br>
+secondo quanto risulta agli atti disponibili.</p>
+<p id="on">p. I'Isprettore Generale della Polizia</p>
+
+<!-- <p>Passaporto numero:</p> -->
+
+</div>

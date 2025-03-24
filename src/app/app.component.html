@@ -1,0 +1,27 @@
+<div class="container-fluid main-container">
+  <div class="row full-height">
+    <!-- Left Section (50%) -->
+    <div class="col-md-6 d-none d-md-block bg-light p-5 pdf-container">
+      <div class="pdf-header">
+        <h3>Left Section</h3>
+        <p>This section can be used for navigation or other content.</p>
+      </div>
+
+      <!-- Display PDF in iframe -->
+      <div class="pdf-wrapper">
+        <iframe *ngIf="signatureUrl" [src]="signatureUrl" class="pdf-viewer"></iframe>
+      </div>
+
+      <!-- File input -->
+      <div class="file-input-wrapper">
+        <input type="file" (change)="onFileSelected($event, 'signature')" accept="application/pdf">
+      </div>
+    </div>
+
+    <!-- Right Section (50%) -->
+    <div class="col-md-6 col-12 p-3 content-container">
+      <app-home></app-home>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

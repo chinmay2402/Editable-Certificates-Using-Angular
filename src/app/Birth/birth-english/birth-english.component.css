@@ -1,0 +1,312 @@
+.certificate-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 5%;
+  }
+
+  button {
+    margin: 20px;
+    float: right;
+    margin-left: 80%;
+  }
+
+  .emblem {
+    width: 80px; /* Adjust size as needed */
+    display: block;
+    margin: 0 auto 10px auto; /* Centers the image and adds space below */
+}
+
+  h5 {
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .line {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    min-height: 20px;
+    /* margin-bottom: -1px; Ensures line touches the vertical border */
+  }
+  
+  .line1 {
+    display: block;
+    width: 102%;
+    border-bottom: 1px solid #000;
+    min-height: 20px;
+    margin-left: -2px;
+    margin-top:-14px;
+    /* margin-bottom: -1px; Ensures line touches the vertical border */
+  }
+
+
+  .table-container {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .table-container1 {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .no-border {
+    border-bottom: none;
+  }
+  
+
+  .table-row .table-cell:last-child{
+    border-right: none;
+  }
+  
+  .table-row-bottom .table-cell:last-child{
+    border-right: none;
+  }
+  
+  .table-row {
+    display: table-row;
+    border-bottom: 1px solid #000;
+  }
+  
+  .table-row-bottom {
+    display: table-row;
+  }
+
+
+
+  .table-row1 .table-cell:last-child{
+    border-right: none;
+  }
+  
+  .table-row1-bottom .table-cell:last-child{
+    border-right: none;
+  }
+  
+  .table-row1 {
+    display: table-row;
+    border-bottom: 1px solid #000;
+  }
+  
+  .table-row1-bottom {
+    display: table-row;
+  }
+
+.csk{
+  border-bottom: 1px solid black;
+}
+
+
+  .table-cell {
+    display: table-cell;
+    padding: 5px;
+    padding-right: 1%;
+    border-right: 1px solid #000;
+    width: 40%;
+  }
+
+  .table-cell1 {
+    display: inline-flex;
+    padding: 15px;
+    border-right: 1px solid black;
+    width: 37.5%;
+
+  }
+
+  .table-cell2 {
+    display: ruby;
+    padding: 17px 0px 17px 6px;
+    width: 100%;
+  }
+
+  .table-cell3 {
+    display: table-cell;
+    padding: 5px;
+    border-right: 1px solid black;
+    width: 20%;
+  }
+
+  .parent-row{
+    display: table-row;
+  }
+  
+  .parent-row .table-cell {
+    width: 50%;
+  }
+  
+  .parent-cell {
+    position: relative;
+    padding:0px;
+    
+  }
+ 
+  .parent-data{
+    display: ruby;
+    padding: 10px;
+   
+  }
+  .parent-data2{
+    display: ruby;
+    margin-left:-189px; 
+    
+    padding:2px;
+  
+  }
+  .vertical-line-short {
+    position: absolute;
+    top: 0;
+    right: 65%;
+    width: 1px;
+    height: 100%;
+    background: #000;
+  }
+
+  .district-align {
+    margin-top: 40px;  /* Moves "District" up to align with "Division" */
+  }
+ .form-control{
+  display: flex; 
+  width: 450px; 
+  height: 30px;
+ }
+
+ .small-input {
+  width: 100%; /* Adjust width as needed */
+  display: flex;
+  height: 30px !important;
+ 
+}
+
+.custom-input {
+  width: 328px !important;
+  height: 30px;
+  margin-top: 10px;
+  display: ruby;
+}
+
+.tiny-input {
+  width: 278px !important;
+  height: 30px;
+  margin-top: 10px;
+  display: ruby;
+}
+
+.custom-input1 {
+  width: 150px !important;
+  display: ruby;
+  height: 30px;
+  margin-top: 12px;
+  margin-bottom: 13px;
+}
+
+
+
+.vertical-line-short2{
+  position: absolute;
+  top: 40;
+  right: 65%;
+  width: 1px;
+  height: 32%;
+  background: #000;
+}
+.vertical-line-short3{
+  position: absolute;
+  top: 40;
+  right: 65%;
+  width: 1px;
+  height: 29%;
+  background: #000;
+}
+.vertical-line-short4{
+  position: absolute;
+  top: 40;
+  right: 65%;
+  width: 1px;
+  height: 32%;
+  background: #000;
+  
+}
+.vertical-line-short41{
+  position: absolute;
+  top: 40;
+  right: 65%;
+  width: 1px;
+  height: 32%;
+  background: #000;
+  
+}
+.text-center img{
+  width:50px;
+}
+
+
+
+
+#ns input{
+  margin-left:49px;
+}
+
+
+
+
+
+.parent-data8{
+  margin-left:-195px;
+  margin-top:-30px;
+}
+
+
+
+#dob input{
+  margin-left:150px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 10px;
+  width:30%;
+  
+  }
+  
+  
+  .stamp-image {
+  width: 130px;  /* Set fixed size */
+  height: 70px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  }
+  
+  
+  .signature-image {
+  width: 130px;  /* Fixed width */
+  height: 70px;  /* Fixed height */
+  object-fit: contain; /* Prevents distortion */
+  border: 1px solid #ccc;
+  margin-top: -100px;
+  margin-right: -102px;
+  }
+  
+  
+  .stamp-container {
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  }
+  
+  .signature-container {
+  
+  margin-top: 5%;
+  position: relative;
+  padding: 20px;
+  background: #ffffff;
+  right:2%;
+  
+  }
